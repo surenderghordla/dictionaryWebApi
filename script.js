@@ -4,7 +4,7 @@ const button = document.querySelector("#button");
 const result = document.querySelector("#result");
 
 button.addEventListener("click", () => {
-    let inpValue = input.value
+    let inpValue = input.value.charAt(0).toUpperCase()+input.value.slice(1);
     try {
         fetch(`${url}${inpValue}`)
             .then((Response) => Response.json())
